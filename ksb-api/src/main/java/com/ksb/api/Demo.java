@@ -33,7 +33,7 @@ public class Demo {
 //		System.out.println(index+"==="+p.get(index));
 		
 		for(;;){
-			System.out.println(new Random().nextInt(2));
+			//System.out.println(new Random().nextInt(2));
 			
 		}
 		
