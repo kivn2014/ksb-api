@@ -79,5 +79,10 @@ public interface CourierService {
 	 */
 	public Map<String, Object> queryCorierList(CourierEntity entity,int skip,int size);
 	
+	/**
+	 * 导入文件方式，批量创建配送员
+	 * @param list
+	 */
+	public void batchCreateCourier(List<CourierEntity> list);
 	
 }

@@ -15,7 +15,7 @@ import java.util.List;
  * 
  * @Class Name DateUtil
  * @Author sa
- * @Create In 2008-10-6
+ * @Create In 2008-10-6ma
  * @Modify In 2014-12-04 
  */
 public class DateUtil {
@@ -633,8 +633,11 @@ public class DateUtil {
 		
 		
 		//getBeforeDay();
-		System.out.println(longDate2String(1436341470000L));
+		System.out.println(new Date().getTime());
+		//System.out.println(longDate2String(1438826352000L));
 		
+//		System.out.println(convertStringToDateTime("2015-08-06 09:59:12").getTime());
+		//System.out.println(Integer.MAX_VALUE);
 	}
 	
 	public static Date getBeforeOrAfterByGiven(Date baseDate, String type , int beforeOrAfterNum, int dayOf){
