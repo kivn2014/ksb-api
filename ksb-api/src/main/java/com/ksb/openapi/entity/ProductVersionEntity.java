@@ -13,7 +13,7 @@ public class ProductVersionEntity implements Serializable {
 	private static final long serialVersionUID = 6991879856545882198L;
 	
 	private String id;
-	private Double version_num;
+	private Integer version_num;
 	private String product_type;
 	private String version_code;
 	private String publish_time;
@@ -31,10 +31,10 @@ public class ProductVersionEntity implements Serializable {
 	public void setId(String id) {
 		this.id = id;
 	}
-	public Double getVersion_num() {
+	public Integer getVersion_num() {
 		return version_num;
 	}
-	public void setVersion_num(Double version_num) {
+	public void setVersion_num(Integer version_num) {
 		this.version_num = version_num;
 	}
 	public String getProduct_type() {
