@@ -26,6 +26,7 @@ public class CourierEntity implements Serializable{
 	private String address_x;
 	private String address_y;
 	private String delivery_status;
+	private String report_time;
 	/**
 	 * 0 正常
 	 * 1 锁定
@@ -51,6 +52,14 @@ public class CourierEntity implements Serializable{
 	public String getId() {
 //		return String.valueOf(id);
 		return id;
+	}
+
+	public String getReport_time() {
+		return report_time;
+	}
+
+	public void setReport_time(String report_time) {
+		this.report_time = report_time;
 	}
 
 	public void setId(String id) {
