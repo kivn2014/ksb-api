@@ -633,7 +633,7 @@ public class DateUtil {
 		
 		
 		//getBeforeDay();
-		System.out.println(new Date().getTime());
+//		System.out.println(new Date().getTime());
 		//System.out.println(longDate2String(1438826352000L));
 		
 //		System.out.println(convertStringToDateTime("2015-08-06 09:59:12").getTime());
