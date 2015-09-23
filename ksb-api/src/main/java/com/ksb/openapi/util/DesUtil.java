@@ -185,7 +185,7 @@ public class DesUtil {
 	   DesUtil des = new DesUtil();// 自定义密钥
 //	   System.out.println("加密前的字符：" + test);
 //	   System.out.println("加密后的字符：" + des.encrypt(test));
-	   System.out.println("解密后的字符：" + des.decrypt("1c3d9c0b6c2db9994477e674cae4b66a"));
+	   System.out.println("解密后的字符：" + des.decrypt("83c4f59aaa221987"));
 	  } catch (Exception e) {
 	   e.printStackTrace();
 	  }

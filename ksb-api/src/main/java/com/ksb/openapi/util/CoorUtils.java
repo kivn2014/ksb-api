@@ -1,5 +1,7 @@
 package com.ksb.openapi.util;
 
+import java.text.DecimalFormat;
+
 public class CoorUtils {
 
 	/**
@@ -42,11 +44,48 @@ public class CoorUtils {
 		return false;
 	}
 	
+	/**
+	 * 根据距离计算配送费
+	 * @param distance
+	 * @return
+	 */
+	public static double getAmountByDistance(double waybillDistance){
+	
+		/*3公里之内 3元；没超过一公里加1元 不足1公里按一公里算*/
+		int baseDistance = 3;
+		
+		/*超过3公里以后,基数里程数*/
+		double increasingDistance = 1;
+		
+		/*超过公里以后,每个increasingDistance单位,需要增加的费用*/
+		double increasingFee = 1;
+		
+		double diff = waybillDistance - baseDistance;
+		
+		/*3公里范围内*/
+		if(diff <= 0){
+			return 3.0;
+		}
+		
+		DecimalFormat df = new DecimalFormat("######0.00");
+		
+		/*计算商家到实际买家之间的直线距离*/
+		String dis = df.format(diff/increasingDistance);
+		
+		/*额外的计费单元*/
+		double extraDistance = Math.ceil(Double.parseDouble(dis));
+		
+		return 3 + (extraDistance*increasingFee);
+		
+	}
+	
+	
 	
 	public static void main(String[] args) {
 		
+		double a = 6.1;
 		
-		
+		System.out.println(getAmountByDistance(a));
 		
 		
 	}

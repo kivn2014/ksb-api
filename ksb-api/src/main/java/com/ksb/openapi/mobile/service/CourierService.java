@@ -36,7 +36,7 @@ public interface CourierService {
 	 * @param phone
 	 * @return
 	 */
-	public CourierEntity queryCourier(String uid,String realName,String phone);
+	public CourierEntity queryFreeCourier(String uid,String realName,String phone);
 	
 	/**
 	 * 新增一个快递员
@@ -84,5 +84,14 @@ public interface CourierService {
 	 * @param list
 	 */
 	public void batchCreateCourier(List<CourierEntity> list);
+	
+	/**
+	 * 
+	 * @param uid
+	 * @param realName
+	 * @param phone
+	 * @return
+	 */
+	public CourierEntity queryCourier(String uid, String realName,String phone);
 	
 }

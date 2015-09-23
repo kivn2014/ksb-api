@@ -618,10 +618,13 @@ public class DateUtil {
 //		System.out.println(st);
 //		System.out.println(et);
 //		System.out.println(longDate2String(st, "yyyyMMdd HH:mm:ss"));
-//		System.out.println(longDate2String(et, "yyyyMMdd HH:mm:ss"));
+//		System.out.println(longDate2String(1442236297000L, "yyyyMMdd HH:mm:ss"));
 		
 		System.out.println(new Date().getTime());
-//		
+		
+//		System.out.println(getStartTime("2015-09-21"));
+//		System.out.println(getEndTime("2015-09-12"));
+		
 //		   long currentTime = new Date().getTime();
 //		   long wt = DateUtil.convertStringToLong("2015-07-23 12:24:19",DateUtil.timePattern);
 //		   System.out.println(currentTime+"==="+wt);
@@ -633,7 +636,6 @@ public class DateUtil {
 		
 		
 		//getBeforeDay();
-		System.out.println(new Date().getTime());
 		//System.out.println(longDate2String(1438826352000L));
 		
 //		System.out.println(convertStringToDateTime("2015-08-06 09:59:12").getTime());

@@ -3,6 +3,7 @@ package com.ksb.openapi.mobile.service;
 import java.util.List;
 import java.util.Map;
 
+import com.ksb.openapi.entity.BuyerEntity;
 import com.ksb.openapi.entity.ResultEntity;
 
 public interface O2oWaybillService {
@@ -46,4 +47,20 @@ public interface O2oWaybillService {
 	 * @param customRemarks
 	 */
 	public void updateCustomRemark(String cid,String waybillId,String customRemarks);
+	
+	/**
+	 * 配送员拍外卖小票上传
+	 * @param cid 配送员id
+	 * @param wbid 订单id
+	 * @param imgId 小票照片id
+	 */
+	public void saveWaybillImgId(String cid,String wbid,String imgId,String pay_sp_fee,String fetch_buyer_fee);
+	
+	/**
+	 * 补录订单中买家信息以及计算订单配送距离
+	 * @param entity
+	 * @param sp_x
+	 * @param sp_y
+	 */
+	public void saveBuyerInfo(BuyerEntity entity,double sp_x,double sp_y,String sp_id);
 }

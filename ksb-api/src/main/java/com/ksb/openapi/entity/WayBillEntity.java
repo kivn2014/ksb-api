@@ -5,7 +5,7 @@ import java.io.Serializable;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @JsonIgnoreProperties(value={"third_party_waybill_id","buyer_id"})
-public class WayBillEntity implements Serializable {
+public class WayBillEntity implements Serializable,Cloneable  {
 
 	/**
 	 * 
@@ -238,6 +238,45 @@ public class WayBillEntity implements Serializable {
 		this.city_code = city_code;
 	}
 
+	public String getImg_name() {
+		return img_name;
+	}
+	public void setImg_name(String img_name) {
+		this.img_name = img_name;
+	}
+
+	public String getWaybill_distance() {
+		return waybill_distance;
+	}
+	public void setWaybill_distance(String waybill_distance) {
+		this.waybill_distance = waybill_distance;
+	}
+
+	public String getHave_bill() {
+		return have_bill;
+	}
+	public void setHave_bill(String have_bill) {
+		this.have_bill = have_bill;
+	}
+	public String getSys_remarks() {
+		return sys_remarks;
+	}
+	public void setSys_remarks(String sys_remarks) {
+		this.sys_remarks = sys_remarks;
+	}
+	
+	public String getWaybill_amount() {
+		return waybill_amount;
+	}
+	public void setWaybill_amount(String waybill_amount) {
+		this.waybill_amount = waybill_amount;
+	}
+	@Override
+	public WayBillEntity clone() throws CloneNotSupportedException{
+		WayBillEntity entity = null;  
+        entity = (WayBillEntity) super.clone();  
+        return entity;  
+    } 
 
 	/*运单标号*/
 	private String id;
@@ -329,4 +368,20 @@ public class WayBillEntity implements Serializable {
 	private String waybill_num;
 	
 	private String custom_remarks;
+	
+	/*外卖小票照片名称*/
+	private String img_name;
+	
+	/*订单配送距离*/
+	private String waybill_distance;
+	
+	/*是否生成账单(默认0表示无账单；1表示生成账单)*/
+	private String have_bill;
+	
+	/*订单金额(根据距离计算出来的配送费)*/
+	private String waybill_amount;
+	  
+	/*系统提示(订单后台自动处理的信息提示)*/
+	private String sys_remarks;
+	
 }

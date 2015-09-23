@@ -37,9 +37,6 @@ public class BuyerEntity implements Serializable {
 	public void setAddress(String address) {
 		this.address = address;
 	}
-	public static long getSerialversionuid() {
-		return serialVersionUID;
-	}
 	
 	public String getId() {
 		return id;
@@ -86,6 +83,20 @@ public class BuyerEntity implements Serializable {
 		this.wbid = wbid;
 	}
 
+	public String getCid() {
+		return cid;
+	}
+	public void setCid(String cid) {
+		this.cid = cid;
+	}
+
+	public String getCity_name() {
+		return city_name;
+	}
+	public void setCity_name(String city_name) {
+		this.city_name = city_name;
+	}
+
 	private String id;
 	private String name;
 	private String phone;
@@ -94,10 +105,22 @@ public class BuyerEntity implements Serializable {
 	private String address;
 	private String status;
 	private String user_type;
+	private String city_name;
 	
 	/*冗余字段，运单批量insert的时候(每个客户是一个独立的运单)*/
 //	private String wabill_id;
 	private String wbid;
+	private String cid;
 
 
+	public static void main(String[] args) {
+		
+		BuyerEntity be = new BuyerEntity();
+		be.setName("侯世鹏");
+		be.setAddress("北京市海淀区");
+		System.out.println(be.getName());
+		System.out.println(be.getAddress());
+	}
+	
+	
 }

@@ -19,6 +19,22 @@ public class ShipperWaybill implements Serializable {
 	private String cargo_type;
 	private String cargo_num;
 	private String num;
+	private String cargo_price;
+	private String c_phone;
+	
+	
+	public String getCargo_price() {
+		return cargo_price;
+	}
+	public void setCargo_price(String cargo_price) {
+		this.cargo_price = cargo_price;
+	}
+	public String getC_phone() {
+		return c_phone;
+	}
+	public void setC_phone(String c_phone) {
+		this.c_phone = c_phone;
+	}
 	public String getSp_id() {
 		return sp_id;
 	}

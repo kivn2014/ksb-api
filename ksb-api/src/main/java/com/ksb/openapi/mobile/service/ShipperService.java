@@ -6,6 +6,7 @@ import java.util.Map;
 import com.ksb.openapi.entity.EnterpriseCityEntity;
 import com.ksb.openapi.entity.EnterpriseEntity;
 import com.ksb.openapi.entity.ResultEntity;
+import com.ksb.openapi.entity.ShipperAddressEntity;
 import com.ksb.openapi.entity.ShipperEntity;
 import com.ksb.openapi.entity.ShipperUserEntity;
 
@@ -133,4 +134,37 @@ public interface ShipperService {
 	 * @param status 运单状态(-3 表示取消)
 	 */
 	public void shipperHandleWaybill(String spId,String spUserId,String waybillId,String status);
+	
+	/**
+	 * 商家常用发货地址列表
+	 * @param sp_id 商家编号
+	 * @return
+	 */
+	public List<ShipperAddressEntity> queryShipperAddressList(String sp_id);
+	
+	/**
+	 * 修改商家默认发货地址
+	 * @param sp_id
+	 * @param address_id
+	 */
+	public void shipperDefaultAddress(String sp_id,String address_id);
+	
+	/**
+	 * 修改商家发货地址
+	 * @param entity
+	 */
+	public void editShipperAddress(ShipperAddressEntity entity);
+	
+	/**
+	 * 商家地址删除
+	 * @param sp_id
+	 * @param address_id
+	 */
+	public void cancelShipperAddress(String sp_id,String address_id);
+	
+	/**
+	 * 新版商家添加发货地址
+	 * @param entity
+	 */
+	public void addShipperAddress(ShipperAddressEntity entity);
 }
